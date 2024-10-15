@@ -36,7 +36,8 @@
         "_locales/zh-cn/Sengo2VisionSensor-strings.json",
         "_locales/zh-tw/Sengo2VisionSensor-strings.json",
         "_locales/zh-cn/Sengo2VisionSensor-jsdoc-strings.json",
-        "_locales/zh-tw/Sengo2VisionSensor-jsdoc-strings.json"
+        "_locales/zh-tw/Sengo2VisionSensor-jsdoc-strings.json",
+        "tutorial-info-cache.json"
     ],
     "testFiles": [
         "test.ts"
