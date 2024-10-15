@@ -15,7 +15,7 @@
 #ifndef SENGO2_H_
 #define SENGO2_H_
 
-#include <SentryFactory.h>
+#include "lib/SentryFactory.h"
 
 namespace tosee_sentry {
 
@@ -30,7 +30,7 @@ class Sengo2 : public SentryFactory {
   Sengo2(const Sengo2&) = delete;
   Sengo2& operator=(const Sengo2&) = delete;
 
-    enum sentry_vision_e
+    enum sengo_vision_e
     {
       //% block="Color"
       kVisionColor = 1,
@@ -133,8 +133,11 @@ class Sengo2 : public SentryFactory {
   };
   /* AprilTag vision mode */
   enum apriltag_vision_mode_e {
+      //% block="16H5"
     kVisionModeFamily16H5 = 0,
+    //% block="25H9"
     kVisionModeFamily25H9 = 1,
+    //% block="36H11"
     kVisionModeFamily36H11 = 2
   };
   /**

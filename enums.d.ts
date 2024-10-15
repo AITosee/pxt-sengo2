@@ -1,7 +1,7 @@
 // Auto-generated. Do not edit.
 
 
-    declare const enum sentry_vision_e
+    declare const enum sengo_vision_e
     {
     //% block="Color"
     kVisionColor = 1,
@@ -30,8 +30,7 @@
     }
 
 
-    declare const enum card_label_e
-    {
+    declare const enum card_label_e {
     //% block="Forward"
     kCardForward = 1,
     //% block="Left"
@@ -42,59 +41,10 @@
     kCardTurnAround = 4,
     //% block="Park"
     kCardPark = 5,
-    //% block="Green Light"
-    kCardGreenLight = 6,
-    //% block="Red Light"
-    kCardRedLight = 7,
-    //% block="Speed 40"
-    kCardSpeed40 = 8,
-    //% block="Speed 60"
-    kCardSpeed60 = 9,
-    //% block="Speed 80"
-    kCardSpeed80 = 10,
-    //% block="✔"
-    kCardCheck = 11,
-    //% block="☓"
-    kCardCross = 12,
-    //% block="◯"
-    kCardCircle = 13,
-    //% block="☐"
-    kCardSquare = 14,
-    //% block="△"
-    kCardTriangle = 15,
-    //% block="+"
-    kCardPlus = 16,
-    //% block="-"
-    kCardMinus = 17,
-    //% block="÷"
-    kCardDivide = 18,
-    //% block="="
-    kCardEqual = 19,
-    //% block="0"
-    kCardZero = 20,
-    //% block="1"
-    kCardOne = 21,
-    //% block="2"
-    kCardTwo = 22,
-    //% block="3"
-    kCardThree = 23,
-    //% block="4"
-    kCardFour = 24,
-    //% block="5"
-    kCardFive = 25,
-    //% block="6"
-    kCardSix = 26,
-    //% block="7"
-    kCardSeven = 27,
-    //% block="8"
-    kCardEight = 28,
-    //% block="9"
-    kCardNine = 29,
     }
 
 
-    declare const enum class20_label_e
-    {
+    declare const enum class20_label_e {
     //% block="Airplane"
     kAirplane = 1,
     //% block="Bicycle"
@@ -138,8 +88,7 @@
     }
 
 
-    declare const enum color_label_e
-    {
+    declare const enum color_label_e {
     //% block="Black"
     kColorBlack = 1,
     //% block="White"
@@ -152,6 +101,16 @@
     kColorBlue = 5,
     //% block="Yellow"
     kColorYellow = 6,
+    }
+
+
+    declare const enum apriltag_vision_mode_e {
+    //% block="16H5"
+    kVisionModeFamily16H5 = 0,
+    //% block="25H9"
+    kVisionModeFamily25H9 = 1,
+    //% block="36H11"
+    kVisionModeFamily36H11 = 2,
     }
 
 // Auto-generated. Do not edit. Really.
