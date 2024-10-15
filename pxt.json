@@ -1,0 +1,52 @@
+{
+    "name": "Sengo2VisionSensor",
+    "description": "",
+    "dependencies": {
+        "core": "*",
+        "radio": "*",
+        "microphone": "*"
+    },
+    "files": [
+        "main.blocks",
+        "main.ts",
+        "README.md",
+        "enums.d.ts",
+        "shims.d.ts",
+        "sengo2.ts",
+        "Sengo2.cpp",
+        "Sengo2.h",
+        "lib/SentryFactory.cpp",
+        "lib/SentryFactory.h",
+        "lib/sentry_stream_base.h",
+        "lib/sentry_type.h",
+        "lib/sentry_uart.cpp",
+        "lib/sentry_uart.h",
+        "lib/sentry_i2c.cpp",
+        "lib/sentry_i2c.h",
+        "lib/hardware/hw_sentry_uart.cpp",
+        "lib/hardware/hw_sentry_uart.h",
+        "lib/hardware/hw_sentry_i2c.cpp",
+        "lib/hardware/hw_sentry_i2c.h",
+        "lib/debug/debug_tool.h",
+        "lib/protoc/protocol_analysis.cpp",
+        "lib/protoc/protocol_analysis.h",
+        "lib/protoc/protocol_types.h",
+        "lib/protoc/sentry_protocol_analysis.h",
+        "lib/protoc/SimpleList.h",
+        "_locales/zh-cn/Sengo2VisionSensor-strings.json",
+        "_locales/zh-tw/Sengo2VisionSensor-strings.json",
+        "_locales/zh-cn/Sengo2VisionSensor-jsdoc-strings.json",
+        "_locales/zh-tw/Sengo2VisionSensor-jsdoc-strings.json"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "targetVersions": {
+        "target": "7.0.51",
+        "targetId": "microbit"
+    },
+    "supportedTargets": [
+        "microbit"
+    ],
+    "preferredEditor": "blocksprj"
+}
