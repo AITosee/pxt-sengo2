@@ -40,6 +40,12 @@ namespace tosee_sentry
     }
 
     //%
+    int sengo2_VisionSetMode(int vision_type, int mode)
+    {
+        return sengo2.VisionSetMode((Sengo2::sengo_vision_e)vision_type, mode);
+    }
+
+    //%
     int sengo2_SetParam(int vision_type, Buffer buff, int param_id)
     {
         if (buff->length == 10)
