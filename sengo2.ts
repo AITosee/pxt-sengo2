@@ -295,7 +295,6 @@ namespace Sengo2VisionSensor {
     //% undetected_color.defl=sentry_led_color_e.kLedRed
     //% leval.min=0 leval.max=15 leval.defl=1
     //% weight=99 inlineInputMode=inline
-    //% blockHidden=true
     //% group="Settings Blocks"
     export function LedSetColor(
         detected_color: sentry_led_color_e,
