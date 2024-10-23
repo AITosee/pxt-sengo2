@@ -21,8 +21,6 @@
     kVision20Classes = 8,
     //% block="QrCode"
     kVisionQrCode = 9,
-    //% block="Custom"
-    kVisionCustom = 10,
     //% block="Motion"
     kVisionMotionDetect = 11,
     //% blockHidden=true

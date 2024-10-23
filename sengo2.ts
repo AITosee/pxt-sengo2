@@ -1,14 +1,8 @@
 declare const enum sengo_vision_e_1 {
-    //% block="Color"
-    //% blockHidden=true
-    kVisionColor = 1,
     //% block="Blob"
     kVisionBlob = 2,
     //% block="AprilTag"
     kVisionAprilTag = 3,
-    //% block="Line"
-    //% blockHidden=true
-    kVisionLine = 4,
     //% block="Learning"
     kVisionLearning = 5,
     //% block="Card"
@@ -17,51 +11,22 @@ declare const enum sengo_vision_e_1 {
     kVisionFace = 7,
     //% block="20Class"
     kVision20Classes = 8,
-    //% block="QrCode"
-    //% blockHidden=true
-    kVisionQrCode = 9,
-    //% block="Custom"
-    //% blockHidden=true
-    kVisionCustom = 10,
     //% block="Motion"
     kVisionMotionDetect = 11,
-    //% blockHidden=true
-    kVisionMaxType,
 }
 
 declare const enum sengo_vision_e_2 {
     //% block="Color"
     kVisionColor = 1,
     //% block="Blob"
-    kVisionBlob = 2,
-    //% block="AprilTag"
-    //% blockHidden=true
-    kVisionAprilTag = 3,
-    //% block="Line"
-    //% blockHidden=true
-    kVisionLine = 4,
+    kVisionBlob = 2
+}
+
+declare const enum sengo_vision_e_3 {
     //% block="Learning"
-    //% blockHidden=true
     kVisionLearning = 5,
-    //% block="Card"
-    //% blockHidden=true
-    kVisionCard = 6,
     //% block="Face"
-    //% blockHidden=true
     kVisionFace = 7,
-    //% block="20Class"
-    //% blockHidden=true
-    kVision20Classes = 8,
-    //% block="QrCode"
-    //% blockHidden=true
-    kVisionQrCode = 9,
-    //% block="Custom"
-    kVisionCustom = 10,
-    //% block="MotionDetect"
-    //% blockHidden=true
-    kVisionMotionDetect = 11,
-    //% blockHidden=true
-    kVisionMaxType,
 }
 
 declare const enum sentry_led_color_e {
@@ -184,6 +149,13 @@ declare const enum sentry_qr_info_e {
     kWidthValue,
     //% block="height"
     kHeightValue,
+}
+
+declare const enum vison_id_op_e {
+    //% block="save data as"
+    VisionIdSave = 100,
+    //% block="delete data"
+    VisionIdClear = 0,
 }
 
 declare const enum sengo2_addr_e {
@@ -448,36 +420,24 @@ namespace Sengo2VisionSensor {
     }
 
     /**
-     * custom prama.
-     * @param x param1.
-     * @param y param2.
-     * @param w param3.
-     * @param h param4.
-     * @param l param5.
+     * blod prama.
+     * @param w detecte min width.
+     * @param h detecte min height.
+     * @param l detecte lable.
      */
-    //% blockId=Sengo2_vision_custom_param block=" Set  Sengo2  algo Custom  param1%x| param2%y| param3%w| param4%h| param5%l| paramset%obj_id "
-    //% obj_id.min=1 obj_id.max=25 obj_id.defl=1
+    //% blockId=Sengo2_vision_id block=" Set  Sengo2  algo%vision_type   %l ID %face_id "
+    //% face_id.min=1 face_id.max=10 face_id.defl=1
     //% inlineInputMode=inline
     //% group="Settings Blocks"
-    //% weight=90
-    export function SetCustomParam(
-        x: number,
-        y: number,
-        w: number,
-        h: number,
-        l: number,
-        obj_id: number = 1
-    ) {
+    //% weight=91
+   
+    export function SetVisionIdParam(vision_type: sengo_vision_e_3,l: vison_id_op_e, face_id: number = 1) {
         let prama = pins.createBuffer(10);
-        prama.setNumber(NumberFormat.UInt16BE, 0, x);
-        prama.setNumber(NumberFormat.UInt16BE, 2, y);
-        prama.setNumber(NumberFormat.UInt16BE, 4, w);
-        prama.setNumber(NumberFormat.UInt16BE, 6, h);
+
         prama.setNumber(NumberFormat.UInt16BE, 8, l);
 
         while (
-            sengo2_SetParam(sengo_vision_e.kVisionCustom, prama, obj_id) !=
-            SENTRY_OK
+            sengo2_SetParam(<number>vision_type, prama, face_id) != SENTRY_OK
         );
     }
     /**
@@ -589,27 +549,7 @@ namespace Sengo2VisionSensor {
     export function QrcodeValueString(): string {
         return sengo2_GetQrCodeValue();
     }
-    /**
-     * Get the result of vision Custom value.
-     * @param object_info Paramters type
-     * @param obj_id:  object index
-     */
-    //% blockId=Sengo2_get_Custom_value block="  Sengo2  algo Custom   %object_info of result %obj_id" color="#2E8B57"
-    //% inlineInputMode=inline
-    //% expandableArgumentMode="enabled"
-    //% obj_id.min=1 obj_id.max=25 obj_id.defl=1
-    //% group="Operation Blocks"
-    //% weight=88
-    export function CustomValue(
-        object_info: sentry_Custom_info_e,
-        obj_id: number = 1
-    ): number {
-        return GetValue(
-            <number>sengo_vision_e.kVisionCustom,
-            <number>object_info,
-            obj_id
-        );
-    }
+
     /**
      * Detected Color
      * @param lable Color lable
@@ -625,7 +565,7 @@ namespace Sengo2VisionSensor {
     ): boolean {
         return (
             GetValue(
-                sengo_vision_e_1.kVisionColor,
+                <number>sengo_vision_e.kVisionColor,
                 sentry_obj_info_e.kLabel,
                 obj_id
             ) == lable
