@@ -70,6 +70,16 @@ class Sengo2 : public SentryFactory {
       kCardTurnAround = 4,
       //% block="Park"
       kCardPark = 5,
+      //% block="Green Light"
+      kCardGreenLight = 6,
+      //% block="Red Light"
+      kCardRedLight = 7,
+      //% block="Speed 40"
+      kCardSpeed40 = 8,
+      //% block="Speed 60"
+      kCardSpeed60 = 9,
+      //% block="Speed 80"
+      kCardSpeed80 = 10,
   };
   /* SentryFactory 20 classes label */
   enum class20_label_e {
