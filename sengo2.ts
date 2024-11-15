@@ -162,10 +162,13 @@ declare const enum sengo2_addr_e {
     //% block="0x60"
     ADDR1 = 0x60,
     //% block="0x61"
+    //% blockHidden=true
     ADDR2 = 0x61,
     //% block="0x62"
+    //% blockHidden=true
     ADDR3 = 0x62,
     //% block="0x63"
+    //% blockHidden=true
     ADDR4 = 0x63,
 }
 
@@ -405,7 +408,7 @@ namespace Sengo2VisionSensor {
     export function SetMaxAprilTagParam(mode: apriltag_vision_mode_e) {
         while (sengo2_VisionSetMode(<number>sengo_vision_e.kVisionAprilTag, <number>mode) != SENTRY_OK);
     }
-    
+
     /**
      * set vision Line number.
      * @param vision_type: vision type.
@@ -430,8 +433,8 @@ namespace Sengo2VisionSensor {
     //% inlineInputMode=inline
     //% group="Settings Blocks"
     //% weight=91
-   
-    export function SetVisionIdParam(vision_type: sengo_vision_e_3,l: vison_id_op_e, face_id: number = 1) {
+
+    export function SetVisionIdParam(vision_type: sengo_vision_e_3, l: vison_id_op_e, face_id: number = 1) {
         let prama = pins.createBuffer(10);
 
         prama.setNumber(NumberFormat.UInt16BE, 8, l);
