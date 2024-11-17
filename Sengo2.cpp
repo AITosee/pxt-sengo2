@@ -14,7 +14,7 @@ namespace tosee_sentry
         }
         else
         {
-            HwSentryUart::hw_uart_t communication_port = 0;
+            hw_uart_t communication_port = 0;
             return sengo2.begin(communication_port, addr);
         }
 

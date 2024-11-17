@@ -101,7 +101,7 @@ uint8_t SentryFactory::SensorInit(bool set_default) {
   return SENTRY_OK;
 }
 
-uint8_t SentryFactory::begin(HwSentryUart::hw_uart_t communication_port,
+uint8_t SentryFactory::begin(hw_uart_t communication_port,
                              bool set_default) {
   sentry_err_t err = SENTRY_OK;
 
@@ -114,7 +114,7 @@ uint8_t SentryFactory::begin(HwSentryUart::hw_uart_t communication_port,
   }
 
   stream_ =
-      new SentryUart((HwSentryUart::hw_uart_t)communication_port, address_);
+      new SentryUart((hw_uart_t)communication_port, address_);
   err = SensorInit(set_default);
   if (err) {
     delete stream_;

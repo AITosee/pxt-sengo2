@@ -15,17 +15,16 @@
 #ifndef SENTRY_UART_H_
 #define SENTRY_UART_H_
 
-#include "hardware/hw_sentry_uart.h"
-#include "protoc/sentry_protocol_analysis.h"
 #include "sentry_stream_base.h"
 
 namespace tosee_sentry {
 
+typedef int hw_uart_t;
+
 class SentryUart
-    : public SentryStreamBase,
-      SentryPtotocolAnalysis<HwSentryUart, HwSentryUart::hw_uart_t> {
+    : public SentryStreamBase{
  public:
-  SentryUart(HwSentryUart::hw_uart_t hw_port, uint32_t address);
+  SentryUart(hw_uart_t hw_port, uint32_t address);
   virtual ~SentryUart();
   SentryUart(const SentryUart&) = delete;
   SentryUart& operator=(const SentryUart&) = delete;

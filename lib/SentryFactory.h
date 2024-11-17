@@ -40,7 +40,7 @@ class SentryFactory {
    * @retval SENTRY_OK: begin success.
    *         other: protocol assert fail.
    */
-  virtual uint8_t begin(HwSentryUart::hw_uart_t communication_port,
+  virtual uint8_t begin(hw_uart_t communication_port,
                         bool set_default = true);
   /**
    * @brief  Sentry begin with I2c.
