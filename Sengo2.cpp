@@ -34,7 +34,7 @@ namespace tosee_sentry
     //%
     int sengo2_SetParamNum(int vision_type, int max_num)
     {
-        return sengo2.SetParamNum((Sengo2::sentry_vision_e)vision_type, max_num);
+        return sengo2.SetParamNum((Sengo2::sengo_vision_e)vision_type, max_num);
     }
 
     //%
@@ -50,7 +50,7 @@ namespace tosee_sentry
             param.result_data4 = buff->data[6]<<8|buff->data[7];
             param.result_data5 = buff->data[8]<<8|buff->data[9];
 
-            return sengo2.SetParam((Sengo2::sentry_vision_e)vision_type, &param, param_id);
+            return sengo2.SetParam((Sengo2::sengo_vision_e)vision_type, &param, param_id);
         }
         
         return SENTRY_FAIL;
@@ -61,18 +61,18 @@ namespace tosee_sentry
     {
         if (status)
         {
-            return sengo2.VisionBegin((Sengo2::sentry_vision_e)vision_type);
+            return sengo2.VisionBegin((Sengo2::sengo_vision_e)vision_type);
         }
         else
         {
-            return sengo2.VisionEnd((Sengo2::sentry_vision_e)vision_type);
+            return sengo2.VisionEnd((Sengo2::sengo_vision_e)vision_type);
         }
     }
 
     //%
     int sengo2_GetValue(int vision_type, int obj, int obj_id)
     {
-        return sengo2.GetValue((Sengo2::sentry_vision_e)vision_type, (sentry_obj_info_e)obj, obj_id);
+        return sengo2.GetValue((Sengo2::sengo_vision_e)vision_type, (sentry_obj_info_e)obj, obj_id);
     }
 
     //%

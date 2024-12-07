@@ -150,11 +150,11 @@ public:
   enum apriltag_vision_mode_e
   {
     //% block="36H11"
-    kVisionModeFamily36H11 = 2
+    kVisionModeFamily36H11 = 2,
     //% block="16H5"
     kVisionModeFamily16H5 = 0,
     //% block="25H9"
-    kVisionModeFamily25H9 = 1,
+    kVisionModeFamily25H9 = 1
   };
   /**
    * @brief  Sentry begin with Serial.
@@ -173,7 +173,7 @@ public:
    * @retval SENTRY_OK:  success
    *         other:  error
    */
-  uint8_t VisionBegin(sentry_vision_e vision_type)
+  uint8_t VisionBegin(sengo_vision_e vision_type)
   {
     return SentryFactory_VisionBegin(&factory, (int)vision_type);
   }
@@ -183,7 +183,7 @@ public:
    * @retval SENTRY_OK:  success
    *         other:  error
    */
-  uint8_t VisionEnd(sentry_vision_e vision_type)
+  uint8_t VisionEnd(sengo_vision_e vision_type)
   {
     return SentryFactory_VisionEnd(&factory, (int)vision_type);
   }
@@ -195,7 +195,7 @@ public:
    * @retval SENTRY_OK:  success
    *         other:  error
    */
-  uint8_t SetParamNum(sentry_vision_e vision_type, int max_num)
+  uint8_t SetParamNum(sengo_vision_e vision_type, int max_num)
   {
     return SentryFactory_SetParamNum(&factory, (int)vision_type, max_num);
   }
@@ -207,7 +207,7 @@ public:
    * @retval SENTRY_OK:  success
    *         other:  error
    */
-  uint8_t SetParam(sentry_vision_e vision_type, sentry_object_t *param,
+  uint8_t SetParam(sengo_vision_e vision_type, sentry_object_t *param,
                    int param_id = 1)
   {
     return Sentry_Stream_SetParam(factory.stream, (int)vision_type, param, param_id);
@@ -225,7 +225,7 @@ public:
    * @param  obj_info:  object information
    * @retval information value
    */
-  int GetValue(sentry_vision_e vision_type, sentry_obj_info_e obj_info,
+  int GetValue(sengo_vision_e vision_type, sentry_obj_info_e obj_info,
                int obj_id = 1)
   {
     return SentryFactory_GetValue(&factory, (int)vision_type, obj_info, obj_id);
@@ -240,7 +240,7 @@ public:
     return NULL;
   }
 
-  uint8_t VisionSetDefault(sentry_vision_e vision_type)
+  uint8_t VisionSetDefault(sengo_vision_e vision_type)
   {
     return SentryFactory_VisionSetDefault(&factory, (int)vision_type);
   }
