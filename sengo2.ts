@@ -179,7 +179,7 @@ namespace Sengo2VisionSensor {
     const SENTRY_OK = 0x00;
 
     //% shim=tosee_sentry::sengo2_Begin
-    function sengo2_Begin(mode: number, addr: number): number {
+    function sengo2_Begin(mode: number, addr: number, buad: number, user_serial: number): number {
         console.log("sengo2_Begin " + addr.toString());
         return 0;
     }
@@ -255,7 +255,7 @@ namespace Sengo2VisionSensor {
     //% group="Settings Blocks"
     //% weight=100
     export function Begin(mode: sentry_mode_e, addr: sengo2_addr_e) {
-        while (sengo2_Begin(mode, addr) != SENTRY_OK);
+        while (sengo2_Begin(mode, addr, 9600, 0) != SENTRY_OK);
     }
 
     /**
