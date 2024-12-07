@@ -28,7 +28,8 @@
     }
 
 
-    declare const enum card_label_e {
+    declare const enum card_label_e
+    {
     //% block="Forward"
     kCardForward = 1,
     //% block="Left"
@@ -52,7 +53,8 @@
     }
 
 
-    declare const enum class20_label_e {
+    declare const enum class20_label_e
+    {
     //% block="Airplane"
     kAirplane = 1,
     //% block="Bicycle"
@@ -96,7 +98,8 @@
     }
 
 
-    declare const enum color_label_e {
+    declare const enum color_label_e
+    {
     //% block="Black"
     kColorBlack = 1,
     //% block="White"
@@ -112,13 +115,14 @@
     }
 
 
-    declare const enum apriltag_vision_mode_e {
+    declare const enum apriltag_vision_mode_e
+    {
+    //% block="36H11"
+    kVisionModeFamily36H11 = 2,
     //% block="16H5"
     kVisionModeFamily16H5 = 0,
     //% block="25H9"
     kVisionModeFamily25H9 = 1,
-    //% block="36H11"
-    kVisionModeFamily36H11 = 2,
     }
 
 // Auto-generated. Do not edit. Really.
