@@ -47,7 +47,7 @@
     "sentry_camera_white_balance_e.kWhiteBalanceCalibrating|block": "校準",
     "Sengo2VisionSensor.LedSetColor|block": "設置  Sengo2  檢測到目標時LED顯示 %detected_color|否則 %undetected_color亮度(1~15)%leval ",
     "sentry_led_color_e.kLedBlue|block": "藍色",
-    "sentry_led_color_e.kLedClose|block": "關閉",
+    "sentry_led_color_e.kLedClose|block": "黑色",
     "sentry_led_color_e.kLedCyan|block": "青色",
     "sentry_led_color_e.kLedGreen|block": "綠色",
     "sentry_led_color_e.kLedPurple|block": "紫色",
