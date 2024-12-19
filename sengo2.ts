@@ -289,6 +289,7 @@ namespace Sengo2VisionSensor {
     //% blockId=Sentry_camera_set_awb block=" Set  Sengo2  white balance mode %wb"
     //% weight=99 inlineInputMode=inline
     //% group="Settings Blocks"
+    //% blockHidden=true
     export function CameraSetAwb(wb: sentry_camera_white_balance_e) {
         while (sengo2_CameraSetAwb(wb) != SENTRY_OK);
     }
