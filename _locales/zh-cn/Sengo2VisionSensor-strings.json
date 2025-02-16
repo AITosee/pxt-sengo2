@@ -138,7 +138,7 @@
     "class20_label_e.kSheep|block": "羊",
     "class20_label_e.kSofa|block": "沙发",
     "class20_label_e.kTrain|block": "火车",
-    "class20_label_e.kTvMonitor|block": "监视器",
+    "class20_label_e.kTvMonitor|block": "显视器",
     "{id:group}Settings Blocks": "设置模块",
     "{id:group}Operation Blocks": "运行模块"
 }

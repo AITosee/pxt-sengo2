@@ -136,8 +136,7 @@
     "class20_label_e.kSheep|block": "羊",
     "class20_label_e.kSofa|block": "沙發",
     "class20_label_e.kTrain|block": "火車",
-    "class20_label_e.kTvMonitor|block": "监視器",
-    "{id:category}Sentry": "Sentry2視覺傳感器",
+    "class20_label_e.kTvMonitor|block": "顯視器",
     "{id:group}Settings Blocks": "設置模塊",
     "{id:group}Operation Blocks": "運行模塊"
 }
